@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "573891001770",
+    "firebase_url": "https://ios-apps-ddbaa.firebaseio.com",
+    "project_id": "ios-apps-ddbaa"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:573891001770:android:0f8c9f30518d0214",
+        "android_client_info": {
+          "package_name": "com.mbn.elkhodary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "573891001770-3vr595f680ulp7f4g6ci9798as4kgntg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mbn.elkhodary",
+            "certificate_hash": "d86df91f35ca9729c31799af3ec9e46ec5c1448a"
+          }
+        },
+        {
+          "client_id": "573891001770-qa1rs9m01gjtunitkdm8g5amlelb40rq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGQwsEQXBhayMJ5F0QdyirKPsdGLXUG3k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "573891001770-qa1rs9m01gjtunitkdm8g5amlelb40rq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

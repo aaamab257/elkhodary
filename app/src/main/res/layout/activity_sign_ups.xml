@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/crMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login"
+    android:orientation="vertical"
+    android:padding="@dimen/value_10">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/font_8"
+            android:paddingLeft="@dimen/font_8"
+            android:paddingTop="@dimen/value_10"
+            android:paddingEnd="@dimen/font_8"
+            android:paddingRight="@dimen/font_8"
+            android:paddingBottom="@dimen/value_3">
+
+            <ImageView
+                android:id="@+id/ivBlackBackButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/value_2"
+                app:srcCompat="@drawable/ic_back_black" />
+
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="@dimen/value_100"
+                android:layout_height="@dimen/value_25"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/value_15"
+                android:layout_marginBottom="@dimen/value_20"
+                android:src="@drawable/logo" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/value_8"
+                android:theme="@style/TextLabegray">
+
+                <com.mbn.elkhodary.customview.edittext.EditTextRegular
+                    android:id="@+id/etUsername"
+                    style="@style/txt_gray_medium"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/font_10"
+                    android:gravity="start"
+                    android:hint="@string/user_name"
+                    android:inputType="textPersonName"
+                    android:paddingBottom="@dimen/value_8"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:textDirection="locale"
+                    android:theme="@style/Theme.App.Base"
+                    app:drawableStartCompat="@drawable/ic_user" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/value_1"
+                android:theme="@style/TextLabegray">
+
+                <com.mbn.elkhodary.customview.edittext.EditTextRegular
+                    android:id="@+id/etEmail"
+                    style="@style/txt_gray_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/font_10"
+                    android:gravity="start"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:paddingBottom="@dimen/value_8"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:textDirection="locale"
+                    app:drawableStartCompat="@drawable/ic_mail" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- <android.support.design.widget.TextInputLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_centerHorizontal="true"
+                 android:layout_marginTop="@dimen/value_1"
+                 android:theme="@style/TextLabegray">
+
+                 <com.potenza.ciyashop_cloths.customview.edittext.EditTextRegular
+                     android:id="@+id/etContact"
+                     style="@style/txt_gray_medium"
+                     android:layout_width="fill_parent"
+                     android:layout_height="wrap_content"
+                     android:drawablePadding="@dimen/value_8"
+                     android:gravity="start"
+                     android:hint="@string/contact_number"
+                     android:inputType="number"
+                     android:paddingBottom="@dimen/value_10"
+                     android:singleLine="true"
+                     android:textAlignment="viewStart"
+                     android:textDirection="locale"
+                     app:drawableStartCompat="@drawable/ic_phone_call" />
+
+             </android.support.design.widget.TextInputLayout>
+ -->
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical">
+
+                <com.rilixtech.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:ccp_defaultNameCode="IN" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/value_1"
+                    android:theme="@style/TextLabegray">
+
+                    <com.mbn.elkhodary.customview.edittext.EditTextRegular
+                        android:id="@+id/etContact"
+                        style="@style/txt_gray_medium"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:hint="@string/contact_number"
+                        android:inputType="number"
+                        android:paddingBottom="@dimen/value_10"
+                        android:singleLine="true"
+                        android:textAlignment="viewStart"
+                        android:textDirection="locale" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/value_1"
+                android:theme="@style/TextLabegray">
+
+                <com.mbn.elkhodary.customview.edittext.EditTextRegular
+                    android:id="@+id/etPass"
+                    style="@style/txt_gray_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/value_8"
+                    android:gravity="start"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:paddingBottom="@dimen/value_10"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:textDirection="locale"
+                    app:drawableStartCompat="@drawable/ic_password" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/value_1"
+                android:theme="@style/TextLabegray">
+
+                <com.mbn.elkhodary.customview.edittext.EditTextRegular
+                    android:id="@+id/etConfirmPass"
+                    style="@style/txt_gray_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/font_10"
+                    android:gravity="start"
+                    android:hint="@string/confirm_password"
+                    android:inputType="textPassword"
+                    android:paddingBottom="@dimen/value_8"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:textDirection="locale"
+                    app:drawableStartCompat="@drawable/ic_password" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.mbn.elkhodary.customview.textview.TextViewLight
+                android:id="@+id/tvSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/value_20"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:paddingTop="@dimen/value_8"
+                android:paddingBottom="@dimen/value_8"
+                android:text="@string/sign_up"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <com.mbn.elkhodary.customview.textview.TextViewLight
+                android:id="@+id/tvAlreadyAccount"
+                style="@style/txt_color_primary_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/value_15"
+                android:text="@string/already_account"
+                android:textAlignment="center" />
+
+            <com.mbn.elkhodary.customview.textview.TextViewLight
+                android:id="@+id/tvSignInNow"
+                style="@style/txt_color_primary_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/value_15"
+                android:text="@string/sign_in_now" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/value_150"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/layout_whatsapp" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

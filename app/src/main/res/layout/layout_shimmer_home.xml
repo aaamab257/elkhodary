@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="@dimen/value_5"
+                    android:layout_weight="0.5" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"
+                    android:background="@color/bg" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <View
+                        android:layout_width="@dimen/value_15"
+                        android:layout_height="@dimen/value_15"
+                        android:layout_gravity="center"
+                        android:background="@drawable/placeholder_round_corner_button">
+
+                    </View>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <View
+                        android:layout_width="@dimen/value_15"
+                        android:layout_height="@dimen/value_15"
+                        android:layout_gravity="center"
+                        android:background="@drawable/placeholder_round_corner_button">
+
+                    </View>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <View
+                        android:layout_width="@dimen/value_15"
+                        android:layout_height="@dimen/value_15"
+                        android:layout_gravity="center"
+                        android:background="@drawable/placeholder_round_corner_button">
+
+                    </View>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <View
+                        android:layout_width="@dimen/value_15"
+                        android:layout_height="@dimen/value_15"
+                        android:layout_gravity="center"
+
+                        android:background="@drawable/placeholder_round_corner_button">
+
+                    </View>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <View
+                        android:layout_width="@dimen/value_15"
+                        android:layout_height="@dimen/value_15"
+                        android:layout_gravity="center"
+                        android:background="@drawable/placeholder_round_corner_button">
+
+                    </View>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <View
+                        android:layout_width="@dimen/value_15"
+                        android:layout_height="@dimen/value_15"
+                        android:layout_gravity="center"
+                        android:background="@drawable/placeholder_round_corner_button">
+
+                    </View>
+                </FrameLayout>
+
+
+            </LinearLayout>
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/value_2"
+        android:background="@color/bg" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/value_100"
+        android:background="@color/placeholder_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/value_8"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <include layout="@layout/layout_category_placeholder" />
+
+        <include layout="@layout/layout_category_placeholder" />
+
+        <include layout="@layout/layout_category_placeholder" />
+
+        <include layout="@layout/layout_category_placeholder" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/value_70"
+        android:layout_marginStart="@dimen/value_5"
+        android:layout_marginLeft="@dimen/value_5"
+        android:layout_marginTop="@dimen/value_8"
+        android:layout_marginEnd="@dimen/value_5"
+        android:layout_marginRight="@dimen/value_5"
+        android:layout_marginBottom="@dimen/value_5"
+        android:background="@color/placeholder_bg"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/value_4"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingTop="@dimen/value_8"
+            android:paddingBottom="@dimen/value_8">
+
+            <com.mbn.elkhodary.customview.textview.TextViewBold
+                style="@style/txt_black_small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/value_5"
+                android:layout_marginLeft="@dimen/value_5"
+                android:layout_marginEnd="@dimen/value_30"
+                android:layout_weight="0.9"
+                android:background="@color/placeholder_bg"
+                android:gravity="start"
+                android:textAlignment="viewStart"
+                android:textDirection="locale" />
+
+            <com.mbn.elkhodary.customview.textview.TextViewRegular
+                style="@style/txt_white_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/value_5"
+                android:layout_marginRight="@dimen/value_5"
+                android:background="@color/placeholder_bg"
+                android:gravity="start"
+                android:paddingStart="@dimen/value_8"
+                android:paddingLeft="@dimen/value_8"
+                android:paddingTop="@dimen/value_3"
+                android:paddingEnd="@dimen/value_8"
+                android:paddingRight="@dimen/value_8"
+                android:paddingBottom="@dimen/value_3"
+                android:text="@string/view_all"
+                android:textAlignment="viewStart"
+                android:textColor="@color/placeholder_bg"
+                android:textDirection="locale" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <include
+                layout="@layout/item_placeholder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/value_5"
+                android:layout_weight="1" />
+
+            <include
+                layout="@layout/item_placeholder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/value_5"
+                android:layout_marginRight="@dimen/value_5"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

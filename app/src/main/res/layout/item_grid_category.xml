@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_gray_strok_button"
+    android:elevation="@dimen/value_2">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.99"
+                android:orientation="vertical">
+
+                <com.mbn.elkhodary.customview.textview.TextViewLight
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/line_gray" />
+
+                <LinearLayout
+                    android:id="@+id/llMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/value_100">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/ivImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                        <FrameLayout
+                            android:id="@+id/llSale"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/black"
+                                android:layout_gravity="bottom"
+                                android:alpha="0.5"
+                                android:gravity="bottom"/>
+
+                            <LinearLayout
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom|center"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/value_4"
+                                android:visibility="visible">
+
+
+                                <com.mbn.elkhodary.customview.textview.TextViewLight
+
+                                    style="@style/txt_white_micro"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="@string/sales_end_in" />
+
+                                <com.mbn.elkhodary.customview.textview.TextViewLight
+                                    android:id="@+id/tvSale"
+                                    style="@style/txt_white_micro"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="@dimen/value_1"
+                                    android:gravity="center"
+                                    android:text=" 01:14:32"
+                                    android:textAlignment="viewStart"
+                                    android:textDirection="locale"
+                                    tools:ignore="RtlCompat" />
+
+                            </LinearLayout>
+
+
+
+                        </FrameLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:clipChildren="false"
+                            android:clipToPadding="false"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+
+                            <com.mbn.elkhodary.customview.like.animation.SparkButton
+                                android:id="@+id/ivWishList"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="end"
+                                app:sparkbutton_activeImage="@drawable/ic_primary_heart"
+                                app:sparkbutton_iconSize="22dp"
+                                app:sparkbutton_inActiveImage="@drawable/ic_gray_heart"
+                                app:sparkbutton_primaryColor="@color/colorPrimary"
+                                app:sparkbutton_secondaryColor="@color/colorPrimaryTransperent" />
+
+                        </LinearLayout>
+
+                        <!--<com.potenza.ciyashop.customview.like.animation.SparkButton-->
+
+
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.mbn.elkhodary.customview.textview.TextViewLight
+                        android:id="@+id/tvName"
+                        style="@style/txt_gray_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/value_2"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/value_3"
+                        android:gravity="center">
+
+                        <com.mbn.elkhodary.customview.MaterialRatingBar
+                            android:id="@+id/ratingBar"
+                            style="@style/Widget.MaterialRatingBar.RatingBar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:isIndicator="true"
+                            android:rating="0"
+                            android:stepSize="0.5"
+                            app:mrb_fillBackgroundStars="true"
+                            app:mrb_progressBackgroundTint="@color/star_color"
+                            app:mrb_progressTint="@color/yello" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/value_20"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/value_1"
+                        android:layout_marginBottom="@dimen/value_2"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.mbn.elkhodary.customview.textview.TextViewRegular
+                            android:id="@+id/tvPrice"
+                            style="@style/txt_color_primary_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/value_5"
+                            android:layout_marginBottom="@dimen/value_3"
+                            android:gravity="center"
+                            android:lines="1"
+                            android:singleLine="true"
+                            android:text="" />
+
+                        <com.mbn.elkhodary.customview.textview.TextViewRegular
+                            android:id="@+id/tvPrice1"
+                            style="@style/txt_color_primary_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/value_2"
+                            android:layout_marginLeft="@dimen/value_2"
+                            android:layout_marginTop="@dimen/value_5"
+                            android:layout_marginBottom="@dimen/value_3"
+                            android:gravity="center"
+                            android:lines="1"
+                            android:singleLine="true"
+                            android:text="" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <com.mbn.elkhodary.customview.textview.TextViewRegular
+                    android:id="@+id/tvAddToCart"
+                    style="@style/txt_white_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:padding="@dimen/value_3"
+                    android:text="@string/add_to_Cart"
+                    android:textAlignment="center"
+                    android:textDirection="locale" />
+
+                <com.mbn.elkhodary.customview.textview.TextViewLight
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/line_gray" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/flDiscount"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="start"
+            android:rotation="0">
+
+            <ImageView
+                android:id="@+id/ivDiscount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:layout_marginBottom="1dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_triangle_down" />
+
+            <com.mbn.elkhodary.customview.textview.TextViewRegular
+
+                android:id="@+id/tvDiscount"
+                style="@style/txt_white_micro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="36dp"
+                android:gravity="center"
+                android:rotation="-45"
+                android:text="20.0%" />
+        </FrameLayout>
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

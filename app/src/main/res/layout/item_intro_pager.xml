@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <ImageView
+            android:id="@+id/ivIntro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:layout_marginTop="@dimen/value_15"
+            app:srcCompat="@drawable/intro_one" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.mbn.elkhodary.customview.textview.TextViewRegular
+                android:id="@+id/tvTitle"
+                style="@style/txt_black_large"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:alpha="0.8"
+                android:gravity="center"
+                android:text="E-Commerce App"
+                android:textSize="@dimen/value_15" />
+
+            <com.mbn.elkhodary.customview.textview.TextViewLight
+               android:id="@+id/tvDescription"
+                style="@style/txt_gray_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/value_10"
+                android:gravity="center"
+                android:lineSpacingExtra="@dimen/value_2"
+                android:text="E-Commerce application templete  buy this code  templete in codecanyon" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

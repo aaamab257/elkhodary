@@ -1,0 +1,41 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_bg"
+    android:id="@+id/crMain"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <com.mbn.elkhodary.customview.textview.TextViewRegular
+            android:id="@+id/tvSplashText"
+            style="@style/txt_color_primary_micro"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="@dimen/value_10"
+            android:gravity="bottom|center"
+            android:text="@string/footer" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="@dimen/value_150"
+        android:layout_height="@dimen/value_40"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/value_20"
+        android:layout_marginLeft="@dimen/value_20"
+        android:layout_marginTop="@dimen/value_50"
+        android:layout_marginEnd="@dimen/value_20"
+        android:layout_marginRight="@dimen/value_20"
+        app:layout_anchor="@+id/linearLayout2"
+        app:layout_anchorGravity="center" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

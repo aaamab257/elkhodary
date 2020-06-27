@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/value_5">
+
+        <com.mbn.elkhodary.customview.textview.TextViewBold
+            style="@style/txt_black_big"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/value_10"
+            android:text="Verification Code" />
+
+        <com.mbn.elkhodary.customview.textview.TextViewRegular
+            android:id="@+id/tvVerificationText"
+            style="@style/txt_black_micro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/value_8"
+            android:layout_marginRight="@dimen/value_8"
+            android:layout_marginTop="@dimen/value_15"
+            android:text="@string/please_type_verification_code_sent_to_in" />
+
+
+        <com.mbn.elkhodary.customview.edittext.EditTextRegular
+            android:id="@+id/etOTP"
+            style="@style/txt_gray_big"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/value_6"
+            android:background="@drawable/black_strok_button"
+            android:gravity="center"
+            android:inputType="number"
+            android:layout_marginLeft="@dimen/value_8"
+            android:layout_marginRight="@dimen/value_8"
+            android:padding="@dimen/value_6"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:textDirection="locale" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.mbn.elkhodary.customview.textview.TextViewRegular
+            android:id="@+id/tvDone"
+            style="@style/txt_white_medium"
+            android:layout_width="@dimen/value_100"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/value_5"
+            android:padding="@dimen/value_6"
+            android:text="@string/validate_otp" />
+
+        <com.mbn.elkhodary.customview.textview.TextViewRegular
+            android:id="@+id/tvResend"
+            style="@style/txt_white_medium"
+            android:layout_width="@dimen/value_70"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/value_10"
+            android:layout_marginBottom="@dimen/value_10"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:padding="@dimen/value_6"
+            android:text="@string/resend_otp" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

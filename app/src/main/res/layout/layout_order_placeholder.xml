@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:shimmer="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/shimmer_view_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    shimmer:duration="800"
+    tools:ignore="MissingConstraints">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                style="@style/txt_gray_small"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/value_5"
+                android:layout_marginStart="@dimen/value_8"
+                android:layout_marginLeft="@dimen/value_8"
+                android:layout_marginTop="@dimen/value_5"
+                android:layout_marginEnd="@dimen/value_8"
+                android:layout_marginRight="@dimen/value_8"
+                android:layout_marginBottom="@dimen/value_5"
+                android:background="@color/placeholder_bg"
+                android:text="" />
+
+            <com.mbn.elkhodary.customview.textview.TextViewRegular
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/value_0.5"
+                android:layout_marginTop="@dimen/value_2"
+                android:background="@color/gray_light" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/value_8"
+                android:layout_marginLeft="@dimen/value_8"
+                android:layout_marginEnd="@dimen/value_8"
+                android:layout_marginRight="@dimen/value_8"
+                android:layout_marginBottom="@dimen/value_10"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="@dimen/value_40"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/value_3"
+                    android:background="@color/placeholder_bg" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/value_10"
+                    android:layout_marginLeft="@dimen/value_10"
+                    android:layout_marginTop="@dimen/value_10"
+                    android:layout_marginEnd="@dimen/value_8"
+                    android:layout_marginRight="@dimen/value_8"
+                    android:orientation="vertical">
+
+                    <View
+                        style="@style/txt_black_small"
+                        android:layout_width="@dimen/value_70"
+                        android:layout_height="@dimen/value_6"
+                        android:background="@color/placeholder_bg"
+                        android:textAlignment="viewStart"
+                        android:textDirection="locale" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/value_3"
+                        android:orientation="horizontal">
+
+                        <View
+                            style="@style/txt_black_small"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/value_6"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/value_10"
+                            android:layout_weight="0.9"
+                            android:background="@color/placeholder_bg" />
+
+                        <View
+                            android:layout_width="@dimen/value_40"
+                            android:layout_height="@dimen/value_15"
+                            android:background="@color/placeholder_bg"
+                            android:padding="@dimen/value_4"
+                            android:textColor="@color/placeholder_bg" />
+
+                    </LinearLayout>
+
+                    <View
+                        style="@style/txt_black_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/value_10"
+                        android:layout_marginTop="@dimen/value_5"
+                        android:background="@color/placeholder_bg" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.mbn.elkhodary.customview.textview.TextViewRegular
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/value_0.5"
+                android:background="@color/gray_light" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                style="@style/txt_gray_small"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/value_5"
+                android:layout_marginStart="@dimen/value_8"
+                android:layout_marginLeft="@dimen/value_8"
+                android:layout_marginTop="@dimen/value_5"
+                android:layout_marginEnd="@dimen/value_8"
+                android:layout_marginRight="@dimen/value_8"
+                android:layout_marginBottom="@dimen/value_5"
+                android:background="@color/placeholder_bg"
+                android:text="" />
+
+            <com.mbn.elkhodary.customview.textview.TextViewRegular
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/value_0.5"
+                android:layout_marginTop="@dimen/value_2"
+                android:background="@color/gray_light" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/value_8"
+                android:layout_marginLeft="@dimen/value_8"
+                android:layout_marginEnd="@dimen/value_8"
+                android:layout_marginRight="@dimen/value_8"
+                android:layout_marginBottom="@dimen/value_10"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="@dimen/value_40"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/value_3"
+                    android:background="@color/placeholder_bg" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/value_10"
+                    android:layout_marginLeft="@dimen/value_10"
+                    android:layout_marginTop="@dimen/value_10"
+                    android:layout_marginEnd="@dimen/value_8"
+                    android:layout_marginRight="@dimen/value_8"
+                    android:orientation="vertical">
+
+                    <View
+                        style="@style/txt_black_small"
+                        android:layout_width="@dimen/value_70"
+                        android:layout_height="@dimen/value_6"
+                        android:background="@color/placeholder_bg"
+                        android:textAlignment="viewStart"
+                        android:textDirection="locale" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/value_3"
+                        android:orientation="horizontal">
+
+                        <View
+                            style="@style/txt_black_small"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/value_6"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/value_10"
+                            android:layout_weight="0.9"
+                            android:background="@color/placeholder_bg" />
+
+                        <View
+                            android:layout_width="@dimen/value_40"
+                            android:layout_height="@dimen/value_15"
+                            android:background="@color/placeholder_bg"
+                            android:padding="@dimen/value_4"
+                            android:textColor="@color/placeholder_bg" />
+
+                    </LinearLayout>
+
+                    <View
+                        style="@style/txt_black_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/value_10"
+                        android:layout_marginTop="@dimen/value_5"
+                        android:background="@color/placeholder_bg" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.mbn.elkhodary.customview.textview.TextViewRegular
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/value_0.5"
+                android:background="@color/gray_light" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                style="@style/txt_gray_small"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/value_5"
+                android:layout_marginStart="@dimen/value_8"
+                android:layout_marginLeft="@dimen/value_8"
+                android:layout_marginTop="@dimen/value_5"
+                android:layout_marginEnd="@dimen/value_8"
+                android:layout_marginRight="@dimen/value_8"
+                android:layout_marginBottom="@dimen/value_5"
+                android:background="@color/placeholder_bg"
+                android:text="" />
+
+            <com.mbn.elkhodary.customview.textview.TextViewRegular
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/value_0.5"
+                android:layout_marginTop="@dimen/value_2"
+                android:background="@color/gray_light" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/value_8"
+                android:layout_marginLeft="@dimen/value_8"
+                android:layout_marginEnd="@dimen/value_8"
+                android:layout_marginRight="@dimen/value_8"
+                android:layout_marginBottom="@dimen/value_10"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="@dimen/value_40"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/value_3"
+                    android:background="@color/placeholder_bg" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/value_10"
+                    android:layout_marginLeft="@dimen/value_10"
+                    android:layout_marginTop="@dimen/value_10"
+                    android:layout_marginEnd="@dimen/value_8"
+                    android:layout_marginRight="@dimen/value_8"
+                    android:orientation="vertical">
+
+                    <View
+                        style="@style/txt_black_small"
+                        android:layout_width="@dimen/value_70"
+                        android:layout_height="@dimen/value_6"
+                        android:background="@color/placeholder_bg"
+                        android:textAlignment="viewStart"
+                        android:textDirection="locale" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/value_3"
+                        android:orientation="horizontal">
+
+                        <View
+                            style="@style/txt_black_small"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/value_6"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/value_10"
+                            android:layout_weight="0.9"
+                            android:background="@color/placeholder_bg" />
+
+                        <View
+                            android:layout_width="@dimen/value_40"
+                            android:layout_height="@dimen/value_15"
+                            android:background="@color/placeholder_bg"
+                            android:padding="@dimen/value_4"
+                            android:textColor="@color/placeholder_bg" />
+
+                    </LinearLayout>
+
+                    <View
+                        style="@style/txt_black_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/value_10"
+                        android:layout_marginTop="@dimen/value_5"
+                        android:background="@color/placeholder_bg" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.mbn.elkhodary.customview.textview.TextViewRegular
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/value_0.5"
+                android:background="@color/gray_light" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                style="@style/txt_gray_small"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/value_5"
+                android:layout_marginStart="@dimen/value_8"
+                android:layout_marginLeft="@dimen/value_8"
+                android:layout_marginTop="@dimen/value_5"
+                android:layout_marginEnd="@dimen/value_8"
+                android:layout_marginRight="@dimen/value_8"
+                android:layout_marginBottom="@dimen/value_5"
+                android:background="@color/placeholder_bg"
+                android:text="" />
+
+            <com.mbn.elkhodary.customview.textview.TextViewRegular
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/value_0.5"
+                android:layout_marginTop="@dimen/value_2"
+                android:background="@color/gray_light" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/value_8"
+                android:layout_marginLeft="@dimen/value_8"
+                android:layout_marginEnd="@dimen/value_8"
+                android:layout_marginRight="@dimen/value_8"
+                android:layout_marginBottom="@dimen/value_10"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="@dimen/value_40"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/value_3"
+                    android:background="@color/placeholder_bg" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/value_10"
+                    android:layout_marginLeft="@dimen/value_10"
+                    android:layout_marginTop="@dimen/value_10"
+                    android:layout_marginEnd="@dimen/value_8"
+                    android:layout_marginRight="@dimen/value_8"
+                    android:orientation="vertical">
+
+                    <View
+                        style="@style/txt_black_small"
+                        android:layout_width="@dimen/value_70"
+                        android:layout_height="@dimen/value_6"
+                        android:background="@color/placeholder_bg"
+                        android:textAlignment="viewStart"
+                        android:textDirection="locale" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/value_3"
+                        android:orientation="horizontal">
+
+                        <View
+                            style="@style/txt_black_small"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/value_6"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/value_10"
+                            android:layout_weight="0.9"
+                            android:background="@color/placeholder_bg" />
+
+                        <View
+                            android:layout_width="@dimen/value_40"
+                            android:layout_height="@dimen/value_15"
+                            android:background="@color/placeholder_bg"
+                            android:padding="@dimen/value_4"
+                            android:textColor="@color/placeholder_bg" />
+
+                    </LinearLayout>
+
+                    <View
+                        style="@style/txt_black_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/value_10"
+                        android:layout_marginTop="@dimen/value_5"
+                        android:background="@color/placeholder_bg" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.mbn.elkhodary.customview.textview.TextViewRegular
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/value_0.5"
+                android:background="@color/gray_light" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                style="@style/txt_gray_small"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/value_5"
+                android:layout_marginStart="@dimen/value_8"
+                android:layout_marginLeft="@dimen/value_8"
+                android:layout_marginTop="@dimen/value_5"
+                android:layout_marginEnd="@dimen/value_8"
+                android:layout_marginRight="@dimen/value_8"
+                android:layout_marginBottom="@dimen/value_5"
+                android:background="@color/placeholder_bg"
+                android:text="" />
+
+            <com.mbn.elkhodary.customview.textview.TextViewRegular
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/value_0.5"
+                android:layout_marginTop="@dimen/value_2"
+                android:background="@color/gray_light" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/value_8"
+                android:layout_marginLeft="@dimen/value_8"
+                android:layout_marginEnd="@dimen/value_8"
+                android:layout_marginRight="@dimen/value_8"
+                android:layout_marginBottom="@dimen/value_10"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="@dimen/value_40"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/value_3"
+                    android:background="@color/placeholder_bg" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/value_10"
+                    android:layout_marginLeft="@dimen/value_10"
+                    android:layout_marginTop="@dimen/value_10"
+                    android:layout_marginEnd="@dimen/value_8"
+                    android:layout_marginRight="@dimen/value_8"
+                    android:orientation="vertical">
+
+                    <View
+                        style="@style/txt_black_small"
+                        android:layout_width="@dimen/value_70"
+                        android:layout_height="@dimen/value_6"
+                        android:background="@color/placeholder_bg"
+                        android:textAlignment="viewStart"
+                        android:textDirection="locale" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/value_3"
+                        android:orientation="horizontal">
+
+                        <View
+                            style="@style/txt_black_small"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/value_6"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/value_10"
+                            android:layout_weight="0.9"
+                            android:background="@color/placeholder_bg" />
+
+                        <View
+                            android:layout_width="@dimen/value_40"
+                            android:layout_height="@dimen/value_15"
+                            android:background="@color/placeholder_bg"
+                            android:padding="@dimen/value_4"
+                            android:textColor="@color/placeholder_bg" />
+
+                    </LinearLayout>
+
+                    <View
+                        style="@style/txt_black_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/value_10"
+                        android:layout_marginTop="@dimen/value_5"
+                        android:background="@color/placeholder_bg" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.mbn.elkhodary.customview.textview.TextViewRegular
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/value_0.5"
+                android:background="@color/gray_light" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</com.facebook.shimmer.ShimmerFrameLayout>

@@ -15,6 +15,7 @@
     <string name="top_rated_product">Productos mejor calificados</string>
     <string name="my_orders">Mis ordenes</string>
     <string name="my_address">Mis direcciones</string>
+    <string name="order_whatsapp">للطلب عبر الواتساب اضغط هنا</string>
     <string name="currency">Elegir Moneda</string>
     <string name="language">Elige lengua</string>
     <string name="address">Dirección</string>

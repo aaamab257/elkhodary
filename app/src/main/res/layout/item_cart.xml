@@ -148,7 +148,7 @@
                     android:layout_margin="@dimen/value_3"
                     android:background="@drawable/cart_round_button"
                     android:gravity="center"
-                    android:orientation="vertical"
+                    android:orientation="horizontal"
                     android:padding="@dimen/value_3">
 
                     <ImageView
@@ -162,8 +162,8 @@
                         style="@style/txt_black_medium"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/value_1"
-                        android:layout_marginBottom="@dimen/value_1"
+                        android:layout_marginLeft="@dimen/value_1"
+                        android:layout_marginRight="@dimen/value_1"
                         android:text="1"
                         android:textColor="@color/colorPrimary" />
 

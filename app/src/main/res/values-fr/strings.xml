@@ -16,6 +16,7 @@
     <string name="my_orders">Mes commandes</string>
     <string name="my_address">Mes adresses</string>
     <string name="currency">Choisir la devise</string>
+    <string name="order_whatsapp">للطلب عبر الواتساب اضغط هنا</string>
     <string name="language">Choisissez la langue</string>
     <string name="address">Adresse</string>
     <string name="my_reward">Mes coupons</string>

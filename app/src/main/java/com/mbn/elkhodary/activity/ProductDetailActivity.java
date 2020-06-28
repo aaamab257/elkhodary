@@ -3,6 +3,7 @@ package com.mbn.elkhodary.activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -278,6 +279,7 @@ public class ProductDetailActivity extends BaseActivity implements OnItemClickLi
     AlertDialog              alertDialog;
     List<CategoryList.Image> imageList     = new ArrayList<>();
     List<CategoryList>       categoryLists = new ArrayList<>();
+    MediaPlayer mp ;
     private boolean                      isDialogOpen  = false;
     private boolean                      isDeepLinking = false;
     private TextView[]                   dots;
@@ -307,6 +309,7 @@ public class ProductDetailActivity extends BaseActivity implements OnItemClickLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_detail);
         ButterKnife.bind(this);
+        mp = MediaPlayer.create(this, R.raw.click_sound);
         getIntentData();
 
         ivWishList.setActivetint(Color.parseColor(getPreferences().getString(Constant.APP_COLOR, Constant.PRIMARY_COLOR)));
@@ -1258,7 +1261,7 @@ public class ProductDetailActivity extends BaseActivity implements OnItemClickLi
 
     @OnClick(R.id.tvBuyNow)
     public void tvBuyNowClick() {
-
+        mp.start();
         if (categoryList.type.equals(RequestParamUtils.variable)) {
 
             isDialogOpen = true;
@@ -1332,6 +1335,7 @@ public class ProductDetailActivity extends BaseActivity implements OnItemClickLi
 
     @OnClick(R.id.tvCart)
     public void tvCartClick() {
+        mp.start();
         if (categoryList.type.equals(RequestParamUtils.variable)) {
             isDialogOpen = true;
             if (!new CheckIsVariationAvailable().isVariationAvailbale(ProductDetailActivity.combination, variationList, categoryList.attributes)) {

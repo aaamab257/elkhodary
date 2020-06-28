@@ -2,6 +2,7 @@ package com.mbn.elkhodary.adapter;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Build;
 import androidx.recyclerview.widget.RecyclerView;
@@ -35,7 +36,7 @@ import butterknife.ButterKnife;
  */
 
 public class RecentViewAdapter extends RecyclerView.Adapter<RecentViewAdapter.RecentViewHolde> {
-
+    MediaPlayer mp ;
     private List<CategoryList> list = new ArrayList<>();
     private Activity activity;
     private OnItemClickListner onItemClickListner;
@@ -67,7 +68,8 @@ public class RecentViewAdapter extends RecyclerView.Adapter<RecentViewAdapter.Re
         holder.llMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                //mp = MediaPlayer.create(activity , R.raw.click_sound);
+                //mp.start();
                 if (list.get(position).type.equals(RequestParamUtils.external)) {
 
                     Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(list.get(position).externalUrl));

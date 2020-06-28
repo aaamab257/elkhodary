@@ -219,7 +219,7 @@
     <string name="order_id">رقم التعريف الخاص بالطلب-#</string>
     <string name="was_place_on">وضعت على</string>
     <string name="and_currently">وحاليا</string>
-
+    <string name="order_whatsapp">للطلب عبر الواتساب اضغط هنا</string>
     <string name="version">الإصدار :</string>1
 
     <string name="download">تحميل</string>

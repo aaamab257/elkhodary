@@ -3,11 +3,14 @@ package com.mbn.elkhodary.adapter;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Build;
+
 import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -62,14 +65,15 @@ public class CategoryListAdapter extends RecyclerView.Adapter<CategoryListAdapte
 
     private static final String TAG = "CategoryListAdapter";
     AlertDialog alertDialog;
-    private List<CategoryList> list          = new ArrayList<>();
-    private Activity           activity;
-    private DatabaseHelper     databaseHelper;
-    private CustomToast        toast;
-    private boolean            isDialogOpen  = false;
-    private int                VariationPage = 1;
-    private List<Variation>    variationList = new ArrayList<>();
-    private int                defaultVariationId;
+    private List<CategoryList> list = new ArrayList<>();
+    private Activity activity;
+    private DatabaseHelper databaseHelper;
+    private CustomToast toast;
+    private boolean isDialogOpen = false;
+    private int VariationPage = 1;
+    private List<Variation> variationList = new ArrayList<>();
+    private int defaultVariationId;
+    MediaPlayer mp;
 
     public CategoryListAdapter(Activity activity) {
         this.activity = activity;
@@ -137,8 +141,9 @@ public class CategoryListAdapter extends RecyclerView.Adapter<CategoryListAdapte
                 holder.ivCart.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-
-                        if (list.get(position).inStock) {
+                         mp = MediaPlayer.create(activity, R.raw.click_sound);
+                         mp.start();
+                    if (list.get(position).inStock) {
                             if (list.get(position).type.equals("variable")) {
 
                                 isDialogOpen = true;
@@ -241,10 +246,10 @@ public class CategoryListAdapter extends RecyclerView.Adapter<CategoryListAdapte
 
 
         //Use for add and remove product from wishList
-        new AddToWishList(activity).addToWishList(holder.ivWishList,new Gson().toJson(list.get(position)), holder.tvPrice1);
+        new AddToWishList(activity).addToWishList(holder.ivWishList, new Gson().toJson(list.get(position)), holder.tvPrice1);
 
-        if (!list.get(position).type.contains(RequestParamUtils.variable)&& list.get(position).onSale) {
-            ((BaseActivity) activity).showDiscount(holder.flDiscount, holder.tvDiscount, holder.ivDiscount, list.get(position).salePrice, list.get(position).regularPrice,list.get(position).onSale);
+        if (!list.get(position).type.contains(RequestParamUtils.variable) && list.get(position).onSale) {
+            ((BaseActivity) activity).showDiscount(holder.flDiscount, holder.tvDiscount, holder.ivDiscount, list.get(position).salePrice, list.get(position).regularPrice, list.get(position).onSale);
         } else {
             holder.flDiscount.setVisibility(View.GONE);
         }

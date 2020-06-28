@@ -17,6 +17,7 @@
     <string name="currency">貨を選んでください</string>
     <string name="language">言語を選択</string>
     <string name="address">住所</string>
+    <string name="order_whatsapp">للطلب عبر الواتساب اضغط هنا</string>
     <string name="my_reward">私のクーポン</string>
     <string name="rate_app">アプリを評価する</string>
     <string name="whatsapp_not_installed">whatsappがインストールされていない</string>

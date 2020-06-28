@@ -3,6 +3,7 @@ package com.mbn.elkhodary.javaclasses;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Build;
 import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -60,12 +61,14 @@ public class AddToCartVariation implements OnResponseListner, OnItemClickListner
     TextViewRegular tvAddToCart;
 
     public AddToCartVariation(Activity activity) {
+
         this.activity = activity;
         this.databaseHelper = new DatabaseHelper(activity);
         this.toast = new CustomToast(activity);
     }
 
     public void addToCart(final TextViewRegular tvAddToCart, String detail) {
+
         this.tvAddToCart = tvAddToCart;
         tvAddToCart.setText(activity.getResources().getString(R.string.add_to_Cart));
         this.list = new Gson().fromJson(detail, new TypeToken<CategoryList>() {
@@ -122,11 +125,11 @@ public class AddToCartVariation implements OnResponseListner, OnItemClickListner
                 tvAddToCart.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        MediaPlayer mp = MediaPlayer.create(activity , R.raw.click_sound);
+                        mp.start();
                         if (list.inStock) {
                             if (list.type.equals("variable")) {
-
                                 callApi();
-
                             } else if (list.type.equals("simple")) {
                                 tvAddToCart.setText(activity.getResources().getString(R.string.go_to_cart));
                                 Cart cart = new Cart();

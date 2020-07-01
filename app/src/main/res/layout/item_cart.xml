@@ -140,40 +140,7 @@
                     </LinearLayout>
                 </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/ll_controller"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_margin="@dimen/value_3"
-                    android:background="@drawable/cart_round_button"
-                    android:gravity="center"
-                    android:orientation="horizontal"
-                    android:padding="@dimen/value_3">
 
-                    <ImageView
-                        android:id="@+id/tvIncrement"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/ic_plus_sign" />
-
-                    <com.mbn.elkhodary.customview.textview.TextViewBold
-                        android:id="@+id/tvQuantity"
-                        style="@style/txt_black_medium"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/value_1"
-                        android:layout_marginRight="@dimen/value_1"
-                        android:text="1"
-                        android:textColor="@color/colorPrimary" />
-
-                    <ImageView
-                        android:id="@+id/tvDecrement"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/ic_minus_sign" />
-
-                </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/ll_delete"
@@ -185,7 +152,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_margin="@dimen/value_2"
+                        android:layout_margin="8dp"
                         app:srcCompat="@drawable/ic_remove" />
                 </LinearLayout>
 
@@ -197,6 +164,40 @@
                 android:background="@color/gray_table" />
         </LinearLayout>
     </FrameLayout>
+    <LinearLayout
+        android:id="@+id/ll_controller"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/value_3"
+        android:background="@drawable/cart_round_button"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/value_3">
 
+        <ImageView
+            android:id="@+id/tvIncrement"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="@dimen/value_15"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_plus_sign" />
 
+        <com.mbn.elkhodary.customview.textview.TextViewBold
+            android:id="@+id/tvQuantity"
+            style="@style/txt_black_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/value_1"
+            android:layout_marginRight="@dimen/value_1"
+            android:text="1"
+            android:textColor="@color/colorPrimary" />
+
+        <ImageView
+            android:id="@+id/tvDecrement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/value_15"
+            app:srcCompat="@drawable/ic_minus_sign" />
+
+    </LinearLayout>
 </LinearLayout>

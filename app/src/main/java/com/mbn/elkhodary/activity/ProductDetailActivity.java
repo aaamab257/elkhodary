@@ -72,6 +72,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.sufficientlysecure.htmltextview.HtmlHttpImageGetter;
 import org.sufficientlysecure.htmltextview.HtmlTextView;
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -275,11 +276,18 @@ public class ProductDetailActivity extends BaseActivity implements OnItemClickLi
 
     @BindView(R.id.llSoldBy)
     LinearLayout llSoldBy;
+    @BindView(R.id.tvIncrement)
+    ImageView tvIncrement;
 
+    @BindView(R.id.tvDecrement)
+    ImageView tvDecrement;
+    @BindView(R.id.tvQuantity)
+    TextView tvQuantity;
     AlertDialog              alertDialog;
     List<CategoryList.Image> imageList     = new ArrayList<>();
     List<CategoryList>       categoryLists = new ArrayList<>();
     MediaPlayer mp ;
+    private List<Cart> list = new ArrayList<>();
     private boolean                      isDialogOpen  = false;
     private boolean                      isDeepLinking = false;
     private TextView[]                   dots;
@@ -388,7 +396,29 @@ public class ProductDetailActivity extends BaseActivity implements OnItemClickLi
             llPincode.setVisibility(View.GONE);
             tvDeliverable.setVisibility(View.GONE);
         }
+        tvIncrement.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int quntity = Integer.parseInt(tvQuantity.getText().toString());
+                quntity = quntity + 1;
+                tvQuantity.setText(quntity+"");
+                databaseHelper.updateQuantity(quntity, RequestParamUtils.PRODUCT_ID, RequestParamUtils.variationId + "");
 
+            }
+        });
+        tvDecrement.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int quntity = Integer.parseInt(tvQuantity.getText().toString());
+                quntity = quntity - 1;
+                if (quntity < 1) {
+                    quntity = 1;
+                }
+                tvQuantity.setText(quntity + "");
+                databaseHelper.updateQuantity(quntity, String.valueOf(categoryList.id + ""), RequestParamUtils.variationId + "");
+
+            }
+        });
     }
 
     public void variationPopupOrInPage() {

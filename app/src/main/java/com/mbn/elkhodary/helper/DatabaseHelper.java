@@ -441,7 +441,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return null;
     }
 
-    public int updateQuantity(int quantity, String product_id, String variation_id) {
+    public int updateQuantity(double quantity, String product_id, String variation_id) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();

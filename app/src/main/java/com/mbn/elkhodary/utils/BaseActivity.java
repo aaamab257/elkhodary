@@ -1064,12 +1064,12 @@ public class BaseActivity extends AppCompatActivity implements GoogleApiClient.C
         logger.logEvent(AppEventsConstants.EVENT_NAME_INITIATED_CHECKOUT, totalPrice, params);
     }
 
-    public void logAbandoned_CartEvent(String contentId, String contentType, int numItems, String currency, double price) {
+    public void logAbandoned_CartEvent(String contentId, String contentType, double numItems, String currency, double price) {
         AppEventsLogger logger = AppEventsLogger.newLogger(this);
         Bundle params = new Bundle();
         params.putString("contentId", contentId);
         params.putString("contentType", contentType);
-        params.putInt("numItems", numItems);
+        params.putDouble("numItems", numItems);
         params.putString("currency", currency);
         params.putDouble("price", price);
         logger.logEvent("Abandoned_Cart", params);

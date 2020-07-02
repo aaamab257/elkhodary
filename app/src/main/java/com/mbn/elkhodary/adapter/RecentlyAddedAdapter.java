@@ -115,6 +115,8 @@ public class RecentlyAddedAdapter extends RecyclerView.Adapter<RecentlyAddedAdap
                         activity.startActivity(browserIntent);
                     } else {
                         Intent intent = new Intent(activity, ProductDetailActivity.class);
+                        intent.putExtra("proID" , list.get(position).id);
+                        intent.putExtra(RequestParamUtils.POSITION, position);
                         activity.startActivity(intent);
                     }
 

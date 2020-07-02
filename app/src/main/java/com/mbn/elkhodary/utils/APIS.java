@@ -5,7 +5,7 @@ import com.ciyashop.library.apicall.URLS;
 public class APIS {
 
     //TODO:Copy and Paste URL and Key Below from Admin Panel.
-    public final String APP_URL = "https://www.stop4web.com/store03/";
+    public final String APP_URL = "https://elkhodary.co/";
     public final String WOO_MAIN_URL = APP_URL + "wp-json/wc/v2/";
     public final String MAIN_URL = APP_URL + "wp-json/pgs-woo-api/v1/";
 

@@ -157,6 +157,7 @@
                     android:gravity="center"
                     android:padding="@dimen/value_3"
                     android:text="@string/add_to_Cart"
+                    android:drawableLeft="@drawable/ic_shopping_cart_white"
                     android:textAlignment="center"
                     android:textDirection="locale" />
 
@@ -197,6 +198,7 @@
                 android:layout_marginBottom="36dp"
                 android:gravity="center"
                 android:rotation="-45"
+                android:textSize="17sp"
                 android:text="20.0%" />
         </FrameLayout>
     </FrameLayout>

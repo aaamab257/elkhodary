@@ -112,6 +112,7 @@
                                     android:layout_marginBottom="46dp"
                                     android:gravity="center"
                                     android:rotation="-45"
+                                    android:textSize="17sp"
                                     android:text="20.0%" />
                             </FrameLayout>
                         </FrameLayout>
@@ -181,7 +182,50 @@
                                 </LinearLayout>
 
                             </LinearLayout>
+                            <LinearLayout
+                                android:id="@+id/ll_controller2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="@dimen/value_3"
+                                android:orientation="horizontal"
+                                android:padding="2dp"
+                                android:visibility="visible"
+                                android:weightSum="3">
 
+                                <ImageView
+                                    android:id="@+id/tvIncrement"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center|start"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    app:srcCompat="@drawable/ic_plus_sign" />
+
+                                <com.mbn.elkhodary.customview.textview.TextViewBold
+                                    android:id="@+id/tvQuantity"
+                                    style="@style/txt_black_medium"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="@dimen/value_1"
+                                    android:layout_marginRight="@dimen/value_1"
+                                    android:layout_weight="1"
+                                    android:text="1"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimary" />
+
+                                <ImageView
+                                    android:id="@+id/tvDecrement"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center|end"
+                                    android:layout_margin="5dp"
+                                    android:layout_marginLeft="@dimen/value_15"
+                                    android:layout_weight="1"
+                                    app:srcCompat="@drawable/ic_minus_sign" />
+
+                            </LinearLayout>
                             <LinearLayout
                                 android:id="@+id/ll_controller"
                                 android:layout_width="match_parent"
@@ -195,14 +239,14 @@
                                 android:padding="@dimen/value_3">
 
                                 <ImageView
-                                    android:id="@+id/tvIncrement"
+                                    android:id="@+id/tvIncrement2"
                                     android:layout_width="wrap_content"
                                     android:layout_marginRight="@dimen/value_15"
                                     android:layout_height="wrap_content"
                                     app:srcCompat="@drawable/ic_plus_sign" />
 
                                 <com.mbn.elkhodary.customview.textview.TextViewBold
-                                    android:id="@+id/tvQuantity"
+                                    android:id="@+id/tvQuantity2"
                                     style="@style/txt_black_medium"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -212,7 +256,7 @@
                                     android:textColor="@color/colorPrimary" />
 
                                 <ImageView
-                                    android:id="@+id/tvDecrement"
+                                    android:id="@+id/tvDecrement2"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="@dimen/value_15"
@@ -1332,6 +1376,7 @@
                     android:layout_weight="0.5"
                     android:background="@color/black"
                     android:gravity="center"
+                    android:drawableLeft="@drawable/ic_shopping_cart_white"
                     android:padding="@dimen/value_8"
                     android:text="@string/add_to_Cart" />
 

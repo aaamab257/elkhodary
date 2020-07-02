@@ -241,7 +241,7 @@ public class CartActivity extends BaseActivity implements OnItemClickListner, On
                 }
             }
         }
-        float amount = 0;
+        double amount = 0;
         for (int i = 0; i < cartAdapter.getList().size(); i++) {
 
             if (cartAdapter.getList().get(i).getCategoryList().taxPrice != null && cartAdapter.getList().get(i).getCategoryList().taxPrice.length() > 0 && !cartAdapter.getList().get(i).getCategoryList().taxPrice.equals("0.0")) {

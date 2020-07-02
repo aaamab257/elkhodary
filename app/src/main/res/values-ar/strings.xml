@@ -105,7 +105,7 @@
     <string name="price"> السعر</string>
     <string name="amount_payable">المبلغ </string>
     <string name="view_price_detail">عرض تفاصيل التفاصيل</string>
-    <string name="continue_">استمر</string>
+    <string name="continue_">تأكيد الطلب</string>
     <string name="sort_by">ترتيب حسب</string>
     <string name="filter">فيلتر</string>
     <string name="color">اللون</string>

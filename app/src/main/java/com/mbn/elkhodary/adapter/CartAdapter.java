@@ -3,6 +3,7 @@ package com.mbn.elkhodary.adapter;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -89,6 +90,8 @@ public class CartAdapter extends RecyclerView.Adapter {
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder h, final int position) {
         final CartViewHolder holder = (CartViewHolder) h;
+        final MediaPlayer mpplus = MediaPlayer.create(activity , R.raw.click_sound);
+        final MediaPlayer mpmin = MediaPlayer.create(activity , R.raw.min_click);
         if (list != null && 0 <= position && position < list.size()) {
             // bindview start
             final String data = list.get(position).getCartId() + "";
@@ -123,7 +126,7 @@ public class CartAdapter extends RecyclerView.Adapter {
             } else {
                 holder.tvPrice.setText(Html.fromHtml(list.get(position).getCategoryList().priceHtml));
             }
-            holder.tvPrice.setTextSize(15);
+            holder.tvPrice.setTextSize(13);
 
             ((BaseActivity) activity).setPrice(holder.tvPrice, holder.tvPrice1, list.get(position).getCategoryList().priceHtml);
 
@@ -133,6 +136,7 @@ public class CartAdapter extends RecyclerView.Adapter {
             holder.tvIncrement.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    mpplus.start();
                     int quntity = Integer.parseInt(holder.tvQuantity.getText().toString());
                     quntity = quntity + 1;
 
@@ -159,15 +163,25 @@ public class CartAdapter extends RecyclerView.Adapter {
             holder.tvDecrement.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    mpmin.start();
                     int quntity = Integer.parseInt(holder.tvQuantity.getText().toString());
                     quntity = quntity - 1;
                     if (quntity < 1) {
-                        quntity = 1;
+                        if (list.get(position).getCategoryList().type.equals(RequestParamUtils.variable)) {
+                            databaseHelper.deleteVariationProductFromCart(list.get(position).getProductid(), list.get(position).getVariationid() + "");
+                        } else {
+                            databaseHelper.deleteFromCart(list.get(position).getProductid());
+                        }
+                        list.remove(position);
+                        onItemClickListner.onItemClick(position, RequestParamUtils.delete, 0);
+                        notifyDataSetChanged();
+                    }else {
+                        holder.tvQuantity.setText(quntity + "");
+                        databaseHelper.updateQuantity(quntity, list.get(position).getProductid(), list.get(position).getVariationid() + "");
+                        list.get(position).setQuantity(quntity);
+                        onItemClickListner.onItemClick(position, RequestParamUtils.decrement, quntity);
                     }
-                    holder.tvQuantity.setText(quntity + "");
-                    databaseHelper.updateQuantity(quntity, list.get(position).getProductid(), list.get(position).getVariationid() + "");
-                    list.get(position).setQuantity(quntity);
-                    onItemClickListner.onItemClick(position, RequestParamUtils.decrement, quntity);
+
                 }
             });
 
@@ -211,14 +225,7 @@ public class CartAdapter extends RecyclerView.Adapter {
             holder.ll_delete.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (list.get(position).getCategoryList().type.equals(RequestParamUtils.variable)) {
-                        databaseHelper.deleteVariationProductFromCart(list.get(position).getProductid(), list.get(position).getVariationid() + "");
-                    } else {
-                        databaseHelper.deleteFromCart(list.get(position).getProductid());
-                    }
-                    list.remove(position);
-                    onItemClickListner.onItemClick(position, RequestParamUtils.delete, 0);
-                    notifyDataSetChanged();
+
                 }
             });
             //bind view over
@@ -232,7 +239,7 @@ public class CartAdapter extends RecyclerView.Adapter {
 
     /**
      * Only if you need to restore open/close state when the orientation is changed.
-     * Call this method in {@link android.app.Activity#onRestoreInstanceState(Bundle)}
+     * Call this method in
      */
     public void restoreStates(Bundle inState) {
         binderHelper.restoreStates(inState);
@@ -245,41 +252,41 @@ public class CartAdapter extends RecyclerView.Adapter {
 
     public class CartViewHolder extends RecyclerView.ViewHolder {
 
-        @BindView(R.id.llMain)
+        @BindView(R.id.llMain2)
         LinearLayout llMain;
 
 
         @BindView(R.id.ratingBar)
         MaterialRatingBar ratingBar;
 
-        @BindView(R.id.ivImage)
+        @BindView(R.id.ivImage2)
         ImageView ivImage;
 
-        @BindView(R.id.tvName)
+        @BindView(R.id.tvName2)
         TextViewRegular tvName;
 
-        @BindView(R.id.tvPrice)
+        @BindView(R.id.tvPrice2)
         TextViewRegular tvPrice;
 
-        @BindView(R.id.tvPrice1)
+        @BindView(R.id.tvPrice12)
         TextViewRegular tvPrice1;
 
-        @BindView(R.id.txtVariation)
+        @BindView(R.id.txtVariation2)
         TextViewLight txtVariation;
 
-        @BindView(R.id.tvQuantity)
+        @BindView(R.id.tvQuantity2)
         TextViewBold tvQuantity;
 
-        @BindView(R.id.tvIncrement)
+        @BindView(R.id.tvIncrement2)
         ImageView tvIncrement;
 
-        @BindView(R.id.tvDecrement)
+        @BindView(R.id.tvDecrement2)
         ImageView tvDecrement;
 
-        @BindView(R.id.ivDelete)
+        @BindView(R.id.ivDelete2)
         ImageView ivDelete;
 
-        @BindView(R.id.ll_delete)
+        @BindView(R.id.ll_delete2)
         LinearLayout ll_delete;
 
 

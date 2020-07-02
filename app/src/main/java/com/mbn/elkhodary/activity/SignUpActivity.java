@@ -155,6 +155,35 @@ public class SignUpActivity extends BaseActivity implements OnResponseListner {
                 mResendToken = token;
             }
         };
+        tvSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (etUsername.getText().toString().length() == 0) {
+                    Toast.makeText(SignUpActivity.this, R.string.enter_username, Toast.LENGTH_SHORT).show();
+                } else if (etEmail.getText().toString().length() == 0) {
+                    Toast.makeText(SignUpActivity.this, R.string.enter_email_address, Toast.LENGTH_SHORT).show();
+                } else if (!Utils.isValidEmail(etEmail.getText().toString())) {
+                    Toast.makeText(SignUpActivity.this, R.string.enter_valid_email_address, Toast.LENGTH_SHORT).show();
+                } else if (etContact.getText().toString().isEmpty()) {
+                    Toast.makeText(SignUpActivity.this, R.string.enter_contact_number, Toast.LENGTH_SHORT).show();
+                } else if (etPass.getText().toString().isEmpty()) {
+                    Toast.makeText(SignUpActivity.this, R.string.enter_password, Toast.LENGTH_SHORT).show();
+                } else if (etConfirmPass.getText().toString().isEmpty()) {
+                    Toast.makeText(SignUpActivity.this, R.string.enter_confirm_password, Toast.LENGTH_SHORT).show();
+                } else if (etPass.getText().toString().equals(etConfirmPass.getText().toString())) {
+                    /*if (Config.OTPVerification) {
+                        String number = ccp.getSelectedCountryCodeWithPlus() + etContact.getText().toString().trim();
+                        Log.e("Otp :-", number);
+                        ShowDialogForOTP(number);
+                    } else {
+                        registerUser();
+                    }*/
+                    registerUser();
+                } else {
+                    Toast.makeText(SignUpActivity.this, R.string.password_and_confirm_password_not_matched, Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 
     private void signInWithPhoneAuthCredential(PhoneAuthCredential credential) {
@@ -218,33 +247,10 @@ public class SignUpActivity extends BaseActivity implements OnResponseListner {
         tvSignUp.setBackgroundColor(Color.parseColor(getPreferences().getString(Constant.SECOND_COLOR, Constant.SECONDARY_COLOR)));
     }
 
-    @OnClick(R.id.tvSignUp)
+    /*@OnClick(R.id.tvSignUp)
     public void tvSignUpClick() {
-        if (etUsername.getText().toString().length() == 0) {
-            Toast.makeText(this, R.string.enter_username, Toast.LENGTH_SHORT).show();
-        } else if (etEmail.getText().toString().length() == 0) {
-            Toast.makeText(this, R.string.enter_email_address, Toast.LENGTH_SHORT).show();
-        } else if (!Utils.isValidEmail(etEmail.getText().toString())) {
-            Toast.makeText(this, R.string.enter_valid_email_address, Toast.LENGTH_SHORT).show();
-        } else if (etContact.getText().toString().isEmpty()) {
-            Toast.makeText(this, R.string.enter_contact_number, Toast.LENGTH_SHORT).show();
-        } else if (etPass.getText().toString().isEmpty()) {
-            Toast.makeText(this, R.string.enter_password, Toast.LENGTH_SHORT).show();
-        } else if (etConfirmPass.getText().toString().isEmpty()) {
-            Toast.makeText(this, R.string.enter_confirm_password, Toast.LENGTH_SHORT).show();
-        } else if (etPass.getText().toString().equals(etConfirmPass.getText().toString())) {
-            if (Config.OTPVerification) {
-                String number = ccp.getSelectedCountryCodeWithPlus() + etContact.getText().toString().trim();
-                Log.e("Otp :-", number);
-                ShowDialogForOTP(number);
-            } else {
-                registerUser();
-            }
 
-        } else {
-            Toast.makeText(this, R.string.password_and_confirm_password_not_matched, Toast.LENGTH_SHORT).show();
-        }
-    }
+    }*/
 
     private void ShowDialogForOTP(final String number) {
 

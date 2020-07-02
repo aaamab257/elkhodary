@@ -1,20 +1,188 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/swipe_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/white"
-    android:orientation="vertical"
+    android:weightSum="2"
     app:dragEdge="right"
-    app:mode="same_level">
+    app:mode="same_level"
+    android:orientation="horizontal">
 
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5">
+
+        <ImageView
+            android:id="@+id/ivImage2"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:scaleType="centerInside"
+            android:src="@drawable/no_image_available" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5">
+
+        <LinearLayout
+            android:id="@+id/llMain2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+                android:gravity="center"
+                >
+                <com.mbn.elkhodary.customview.textview.TextViewRegular
+                    android:id="@+id/tvName2"
+                    style="@style/txt_gray_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="start"
+                    android:maxLines="2"
+                    android:singleLine="true"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:textAlignment="viewStart"
+                    android:textDirection="locale" />
+                <com.mbn.elkhodary.customview.textview.TextViewRegular
+                    android:id="@+id/tvPrice2"
+                    android:layout_weight="1"
+                    style="@style/txt_color_primary_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:textSize="13sp"
+                    android:text="" />
+
+                <com.mbn.elkhodary.customview.textview.TextViewRegular
+                    android:id="@+id/tvPrice12"
+                    android:layout_weight="1"
+                    style="@style/txt_color_primary_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="13sp"
+                    android:singleLine="true"
+                    android:text="" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/ll_controller2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/value_3"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                android:visibility="visible"
+                android:weightSum="3">
+
+                <ImageView
+                    android:id="@+id/tvIncrement2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center|start"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/ic_plus_sign" />
+
+                <com.mbn.elkhodary.customview.textview.TextViewBold
+                    android:id="@+id/tvQuantity2"
+                    style="@style/txt_black_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/value_1"
+                    android:layout_marginRight="@dimen/value_1"
+                    android:layout_weight="1"
+                    android:text="1"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary" />
+
+                <ImageView
+                    android:id="@+id/tvDecrement2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center|end"
+                    android:layout_margin="5dp"
+                    android:layout_marginLeft="@dimen/value_15"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/ic_minus_sign" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_delete2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/ivDelete2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_remove" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/value_5"
+            android:gravity="start"
+            android:orientation="horizontal">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/value_2.5"
+                android:gravity="start"
+                android:orientation="horizontal">
+
+                <com.mbn.elkhodary.customview.textview.TextViewLight
+                    android:id="@+id/txtVariation2"
+                    style="@style/txt_gray_micro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text=""
+                    android:textAlignment="viewStart"
+                    android:textDirection="locale" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
-        android:visibility="visible">
+        android:visibility="gone">
 
         <LinearLayout
             android:id="@+id/llMain"
@@ -141,7 +309,6 @@
                 </LinearLayout>
 
 
-
                 <LinearLayout
                     android:id="@+id/ll_delete"
                     android:layout_width="wrap_content"
@@ -164,6 +331,7 @@
                 android:background="@color/gray_table" />
         </LinearLayout>
     </FrameLayout>
+
     <LinearLayout
         android:id="@+id/ll_controller"
         android:layout_width="match_parent"
@@ -173,13 +341,14 @@
         android:background="@drawable/cart_round_button"
         android:gravity="center"
         android:orientation="horizontal"
-        android:padding="@dimen/value_3">
+        android:padding="@dimen/value_3"
+        android:visibility="gone">
 
         <ImageView
             android:id="@+id/tvIncrement"
             android:layout_width="wrap_content"
-            android:layout_marginRight="@dimen/value_15"
             android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/value_15"
             app:srcCompat="@drawable/ic_plus_sign" />
 
         <com.mbn.elkhodary.customview.textview.TextViewBold

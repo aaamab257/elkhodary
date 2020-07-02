@@ -517,6 +517,7 @@ public class CategoryListActivity extends BaseActivity implements  OnResponseLis
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQUEST_CODE) {
 
             if (data != null) {

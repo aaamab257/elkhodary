@@ -33,6 +33,7 @@
         android:layout_gravity="bottom|start"
         android:gravity="center"
         android:textSize="18sp"
+        android:visibility="gone"
         android:layout_margin="3dp"
         android:padding="12dp"
         android:background="@color/yello"

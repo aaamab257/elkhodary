@@ -28,13 +28,13 @@ public class TextViewRegular extends TextView {
 
     public TextViewRegular(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-        initAttrs(context, attrs);
+        //initAttrs(context, attrs);
         init();
     }
 
     public TextViewRegular(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        initAttrs(context, attrs);
+        //initAttrs(context, attrs);
         init();
     }
 

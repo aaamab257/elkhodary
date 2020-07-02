@@ -115,6 +115,8 @@ public class SelectedItemAdapter extends RecyclerView.Adapter<SelectedItemAdapte
                         activity.startActivity(browserIntent);
                     } else {
                         Intent intent = new Intent(activity, ProductDetailActivity.class);
+                        intent.putExtra("proID" , list.get(position).id);
+                        intent.putExtra(RequestParamUtils.POSITION, position);
                         activity.startActivity(intent);
                     }
 

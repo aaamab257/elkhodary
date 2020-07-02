@@ -311,6 +311,7 @@ public class ProductDetailActivity extends BaseActivity implements OnItemClickLi
     private int     defaultVariationId;
     private int     VariationPage = 1;
     private boolean isFirstLoad   = true;
+    private OnItemClickListner onItemClickListner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -318,6 +319,8 @@ public class ProductDetailActivity extends BaseActivity implements OnItemClickLi
         setContentView(R.layout.activity_product_detail);
         ButterKnife.bind(this);
         mp = MediaPlayer.create(this, R.raw.click_sound);
+        final MediaPlayer mpmin = MediaPlayer.create(this , R.raw.min_click);
+        final MediaPlayer mpplus = MediaPlayer.create(this , R.raw.click_sound);
         getIntentData();
 
         ivWishList.setActivetint(Color.parseColor(getPreferences().getString(Constant.APP_COLOR, Constant.PRIMARY_COLOR)));
@@ -396,27 +399,31 @@ public class ProductDetailActivity extends BaseActivity implements OnItemClickLi
             llPincode.setVisibility(View.GONE);
             tvDeliverable.setVisibility(View.GONE);
         }
+
         tvIncrement.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mpplus.start();
                 int quntity = Integer.parseInt(tvQuantity.getText().toString());
                 quntity = quntity + 1;
                 tvQuantity.setText(quntity+"");
-                databaseHelper.updateQuantity(quntity, RequestParamUtils.PRODUCT_ID, RequestParamUtils.variationId + "");
-
+                databaseHelper.updateQuantity(quntity, RequestParamUtils.ID, RequestParamUtils.variationId + "");
+                //list.get(Integer.parseInt(RequestParamUtils.POSITION)).setQuantity(quntity);
+                //onItemClickListner.onItemClick(Integer.parseInt(RequestParamUtils.POSITION), RequestParamUtils.increment , quntity);
             }
         });
         tvDecrement.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mpmin.start();
                 int quntity = Integer.parseInt(tvQuantity.getText().toString());
                 quntity = quntity - 1;
                 if (quntity < 1) {
                     quntity = 1;
                 }
                 tvQuantity.setText(quntity + "");
-                databaseHelper.updateQuantity(quntity, String.valueOf(categoryList.id + ""), RequestParamUtils.variationId + "");
-
+                databaseHelper.updateQuantity(quntity, RequestParamUtils.ID, RequestParamUtils.variationId + "");
+                //list.get(Integer.parseInt(RequestParamUtils.POSITION)).setQuantity(quntity);
             }
         });
     }
@@ -1329,7 +1336,7 @@ public class ProductDetailActivity extends BaseActivity implements OnItemClickLi
                 e.printStackTrace();
             }
             Cart cart = new Cart();
-            cart.setQuantity(1);
+            cart.setQuantity(Integer.parseInt(tvQuantity.getText().toString()));
             cart.setVariation(object.toString());
             cart.setProduct(new Gson().toJson(categoryList));
             cart.setVariationid(0);
@@ -1350,7 +1357,7 @@ public class ProductDetailActivity extends BaseActivity implements OnItemClickLi
                         e.printStackTrace();
                     }
                     Cart cart = new Cart();
-                    cart.setQuantity(1);
+                    cart.setQuantity(Integer.parseInt(tvQuantity.getText().toString()));
                     cart.setVariation(object.toString());
                     cart.setProduct(new Gson().toJson(groupProductAdapter.getList().get(i)));
                     cart.setVariationid(0);
@@ -1404,7 +1411,7 @@ public class ProductDetailActivity extends BaseActivity implements OnItemClickLi
                 e.printStackTrace();
             }
             Cart cart = new Cart();
-            cart.setQuantity(1);
+            cart.setQuantity(Integer.parseInt(tvQuantity.getText().toString()));
             cart.setVariation(object.toString());
             cart.setProduct(new Gson().toJson(categoryList));
             cart.setVariationid(0);
@@ -1456,7 +1463,7 @@ public class ProductDetailActivity extends BaseActivity implements OnItemClickLi
                         e.printStackTrace();
                     }
                     Cart cart = new Cart();
-                    cart.setQuantity(1);
+                    cart.setQuantity(Integer.parseInt(tvQuantity.getText().toString()));
                     cart.setVariation(object.toString());
                     cart.setProduct(new Gson().toJson(groupProductAdapter.getList().get(i)));
                     cart.setVariationid(0);
@@ -1524,8 +1531,9 @@ public class ProductDetailActivity extends BaseActivity implements OnItemClickLi
         } catch (JSONException e) {
             e.printStackTrace();
         }
+
         Cart cart = new Cart();
-        cart.setQuantity(1);
+        cart.setQuantity(Integer.parseInt(tvQuantity.getText().toString()));
         cart.setVariation(object.toString());
         setVariationPriceAndOtherDetailToList(ismanageStock);
         cart.setVariationid(new CheckIsVariationAvailable().getVariationid(variationList, list));

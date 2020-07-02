@@ -78,6 +78,7 @@ public class RecentViewAdapter extends RecyclerView.Adapter<RecentViewAdapter.Re
                     Constant.CATEGORYDETAIL = list.get(position);
                     Intent intent = new Intent(activity, ProductDetailActivity.class);
                     intent.putExtra(RequestParamUtils.ID, list.get(position).id);
+                    intent.putExtra(RequestParamUtils.POSITION, position);
                     activity.startActivity(intent);
                 }
             }

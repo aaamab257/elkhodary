@@ -115,6 +115,8 @@ public class TopRatedProductAdapter extends RecyclerView.Adapter<TopRatedProduct
                         activity.startActivity(browserIntent);
                     } else {
                         Intent intent = new Intent(activity, ProductDetailActivity.class);
+                        intent.putExtra("proID" , list.get(position).id);
+                        intent.putExtra("intPosition", position);
                         activity.startActivity(intent);
                     }
 

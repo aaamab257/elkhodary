@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="horizontal"
-    android:weightSum="2"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginBottom="50dp"
     android:gravity="right"
     android:layoutDirection="rtl"
-    android:layout_marginBottom="50dp">
+    android:orientation="horizontal"
+    android:weightSum="2">
 
 
     <!--<com.potenza.ciyashop_cloths.utils.DraggbleGroup-->
@@ -17,27 +17,10 @@
     <!--android:layout_height="wrap_content"-->
     <!--android:orientation="vertical">-->
 
-    <ImageView
-        android:id="@+id/ivWhatsappDrag"
-        android:layout_width="@dimen/value_25"
-        android:layout_height="@dimen/value_25"
-        android:layout_gravity="bottom|start"
-        android:layout_margin="10dp"
-        android:background="@drawable/whatsapp_bg"
-        app:srcCompat="@drawable/ic_whatsapp" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/value_25"
-        android:text="@string/order_whatsapp"
-        android:textColor="@color/black_strok"
-        android:layout_gravity="bottom|start"
-        android:gravity="center"
-        android:textSize="18sp"
-        android:visibility="gone"
-        android:layout_margin="3dp"
-        android:padding="12dp"
-        android:background="@color/yello"
-        />
+
+
+
+
     <!--</com.potenza.ciyashop_cloths.utils.DraggbleGroup>-->
 
 </LinearLayout>

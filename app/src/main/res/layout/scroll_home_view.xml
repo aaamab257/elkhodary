@@ -457,5 +457,43 @@
         </LinearLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_marginBottom="@dimen/value_20"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/ic_baseline_phone"
+            app:fabSize="normal"
+            android:visibility="gone"
+            app:rippleColor="@color/white" />
 
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabMic"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/whatsappicon"
+            app:fabSize="normal"
+            app:rippleColor="@color/white" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginBottom="18dp"
+            app:srcCompat="@drawable/ic_baseline_phone"
+            app:fabSize="normal"
+            app:rippleColor="@color/white" />
+    </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

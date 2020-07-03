@@ -1,16 +1,23 @@
 package com.mbn.elkhodary.activity;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import androidx.annotation.RequiresApi;
 import com.google.android.material.appbar.AppBarLayout;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.core.view.ViewCompat;
 import androidx.viewpager.widget.ViewPager;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -65,6 +72,7 @@ import com.mbn.elkhodary.interfaces.OnItemClickListner;
 import com.mbn.elkhodary.model.CategoryList;
 import com.mbn.elkhodary.model.Home;
 import com.mbn.elkhodary.model.NavigationList;
+import com.mbn.elkhodary.utils.Animation;
 import com.mbn.elkhodary.utils.BaseActivity;
 import com.mbn.elkhodary.utils.Config;
 import com.mbn.elkhodary.utils.Constant;
@@ -175,6 +183,9 @@ public class HomeActivity extends BaseActivity implements OnItemClickListner, On
     private boolean                 isAutoScroll = false, isSpecialDeal = false;
     private long    mBackPressed;
     private Handler handler;
+    FloatingActionButton fab ;
+    boolean isRotate = false ;
+    private static final int REQUEST_PHONE_CALL = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -215,9 +226,35 @@ public class HomeActivity extends BaseActivity implements OnItemClickListner, On
             setSixReasonAdapter();
             setRecentViewAdapter();
             getRecentData();
+            fab = findViewById(R.id.fabAdd);
+            phonePer();
+            fab.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    isRotate = Animation.rotateFab(v,!isRotate);
+                    if(isRotate){
+                        Animation.showIn(findViewById(R.id.fabCall));
+                        Animation.showIn(findViewById(R.id.fabMic));
+                    }else{
+                        Animation.showOut(findViewById(R.id.fabCall));
+                        Animation.showOut(findViewById(R.id.fabMic));
+                    }
+                }
+            });
+            findViewById(R.id.fabCall).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + homeRider.pgsAppContactInfo.phone));
+                    startActivity(intent);
+                }
+            });
         }
     }
-
+    private void phonePer() {
+        if (ContextCompat.checkSelfPermission(HomeActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(HomeActivity.this, new String[]{Manifest.permission.CALL_PHONE}, REQUEST_PHONE_CALL);
+        }
+    }
     @Override
     protected void onStart() {
         super.onStart();

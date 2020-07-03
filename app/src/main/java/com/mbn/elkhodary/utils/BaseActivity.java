@@ -54,6 +54,7 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.appindexing.FirebaseAppIndex;
 import com.google.firebase.appindexing.FirebaseUserActions;
 import com.google.firebase.appindexing.Indexable;
@@ -100,7 +101,7 @@ public class BaseActivity extends AppCompatActivity implements GoogleApiClient.C
     public CustomProgressDialog progressDialog;
     public String               lat, lon;
     public ImageView ivBack, ivLogo;
-    public ImageView ivWhatsappDrag;
+    public FloatingActionButton ivWhatsappDrag;
     AsyncProgressDialog ad;
     Location            mLastLocation;
     String              language;
@@ -159,14 +160,14 @@ public class BaseActivity extends AppCompatActivity implements GoogleApiClient.C
     private void setWhatsAppButton() {
 
 
-        ivWhatsappDrag = (ImageView) findViewById(R.id.ivWhatsappDrag);
+        ivWhatsappDrag =  findViewById(R.id.fabMic);
 
 
-        if (Constant.WHATSAPPENABLE.equals("enable") && !Constant.WHATSAPP.isEmpty()) {
+        /*if (Constant.WHATSAPPENABLE.equals("enable") && !Constant.WHATSAPP.isEmpty()) {
             ivWhatsappDrag.setVisibility(View.VISIBLE);
         } else {
             ivWhatsappDrag.setVisibility(View.GONE);
-        }
+        }*/
         final GestureDetector gestureDetector = new GestureDetector(getApplicationContext(), new GestureTap());
         ivWhatsappDrag.setOnTouchListener(
                 new View.OnTouchListener() {
@@ -542,7 +543,7 @@ public class BaseActivity extends AppCompatActivity implements GoogleApiClient.C
         } else {
             whatsappContact.setVisibility(View.GONE);
         }*/
-        if (findViewById(R.id.ivWhatsappDrag) != null) {
+        if (findViewById(R.id.fabMic) != null) {
             setWhatsAppButton();
         }
     }

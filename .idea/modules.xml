@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/StudioProjects-elkhodary.iml" filepath="$PROJECT_DIR$/.idea/modules/StudioProjects-elkhodary.iml" group="elkhodary" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/StudioProjects-elkhodary-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/StudioProjects-elkhodary-app.iml" group="elkhodary/app" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="ciyashop(4.5)/app" />
       <module fileurl="file://$PROJECT_DIR$/ciyashop(4.5).iml" filepath="$PROJECT_DIR$/ciyashop(4.5).iml" group="ciyashop(4.5)" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/elkhodary.iml" filepath="$PROJECT_DIR$/.idea/modules/elkhodary.iml" group="elkhodary" />

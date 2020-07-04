@@ -1,41 +1,42 @@
 {
   "project_info": {
-    "project_number": "573891001770",
-    "firebase_url": "https://ios-apps-ddbaa.firebaseio.com",
-    "project_id": "ios-apps-ddbaa"
+    "project_number": "551481717433",
+    "firebase_url": "https://elkhodary-233ae.firebaseio.com",
+    "project_id": "elkhodary-233ae",
+    "storage_bucket": "elkhodary-233ae.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:573891001770:android:0f8c9f30518d0214",
+        "mobilesdk_app_id": "1:551481717433:android:9e6bc6145cdd807f406168",
         "android_client_info": {
           "package_name": "com.mbn.elkhodary"
         }
       },
       "oauth_client": [
         {
-          "client_id": "573891001770-3vr595f680ulp7f4g6ci9798as4kgntg.apps.googleusercontent.com",
+          "client_id": "551481717433-0jplctbt0fsucj2947rne2oi1fqrv291.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.mbn.elkhodary",
-            "certificate_hash": "d86df91f35ca9729c31799af3ec9e46ec5c1448a"
+            "certificate_hash": "97aa226816a2c166dc70722f9533205b25ebe0be"
           }
         },
         {
-          "client_id": "573891001770-qa1rs9m01gjtunitkdm8g5amlelb40rq.apps.googleusercontent.com",
+          "client_id": "551481717433-f0o09cf210lip9s3mmq72o6qi296hknh.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAGQwsEQXBhayMJ5F0QdyirKPsdGLXUG3k"
+          "current_key": "AIzaSyBLr6W3shE-7JWR1PnLIc-EYjddEXt2Jls"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "573891001770-qa1rs9m01gjtunitkdm8g5amlelb40rq.apps.googleusercontent.com",
+              "client_id": "551481717433-f0o09cf210lip9s3mmq72o6qi296hknh.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -171,14 +171,14 @@ public class SignUpActivity extends BaseActivity implements OnResponseListner {
                 } else if (etConfirmPass.getText().toString().isEmpty()) {
                     Toast.makeText(SignUpActivity.this, R.string.enter_confirm_password, Toast.LENGTH_SHORT).show();
                 } else if (etPass.getText().toString().equals(etConfirmPass.getText().toString())) {
-                    /*if (Config.OTPVerification) {
+                    if (Config.OTPVerification) {
                         String number = ccp.getSelectedCountryCodeWithPlus() + etContact.getText().toString().trim();
                         Log.e("Otp :-", number);
                         ShowDialogForOTP(number);
                     } else {
                         registerUser();
-                    }*/
-                    registerUser();
+                    }
+                   // registerUser();
                 } else {
                     Toast.makeText(SignUpActivity.this, R.string.password_and_confirm_password_not_matched, Toast.LENGTH_SHORT).show();
                 }

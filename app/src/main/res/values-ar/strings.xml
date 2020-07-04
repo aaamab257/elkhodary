@@ -190,7 +190,7 @@
     <string name="popularity">شعبية</string>
     <string name="low_to_high">السعر من الارخص للاعلى</string>
     <string name="high_to_low">السعر الاعلى الى الادنى</string>
-    <string name="cart">عربة التسوق</string>
+    <string name="cart">سلة المشتريات</string>
     <string name="cart_empty">البطاقه خاليه.</string>
     <string name="items">العناصر</string>
     <string name="no_product_available">لا يوجد منتج متاح</string>
@@ -210,7 +210,7 @@
     <string name="quick_overviews">لمحة سريعة</string>
     <string name="rate_product">معدل المنتج</string>
     <string name="your_review_is_waiting_for_approval">مراجعتك في انتظار الموافقة</string>
-    <string name="item_added_to_your_cart">تم إضافة المنتج إلى سلة التسوق الخاصة بك بنجاح</string>
+    <string name="item_added_to_your_cart">تم إضافة المنتج إلى سلة المشتريات الخاصة بك بنجاح</string>
     <string name="variation_not_available">هذا التنوع غير متوفر</string>
     <string name="combition_doesnt_exist">هذا الجمع غير موجود. اختر متغير آخر</string>
     <string name="or_sign_up_with">أو اشترك مع</string>
